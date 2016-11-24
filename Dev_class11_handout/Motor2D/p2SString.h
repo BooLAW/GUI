@@ -75,7 +75,9 @@ public:
 		if(str != NULL)
 			delete[] str;
 	}
-
+	void SetString(char* newstring) {
+		strcpy(str, newstring);
+	}
 	const p2SString& create(const char *format, ...)
 	{
 		size = 0;

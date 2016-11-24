@@ -32,7 +32,7 @@ public:
 	bool clicked;
 	uint tab_id;
 public:
-	bool IsClicked() ;
+	bool RightClicked() ;
 	bool IsOnTop() ;
 };
 
@@ -55,9 +55,15 @@ private:
 };
 class Label : public Texture, Interactive_element
 {
-	p2SString text;
-	uint bar_pos;
 
+public:
+	Label(char* newstring) {
+		mystring.SetString(newstring);
+	}
+public:
+	p2SString mystring;
+	uint bar_pos;
+	
 private:
 	void Draw() {};
 	void Update() {};
